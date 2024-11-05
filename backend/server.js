@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config()
 const { db } = require('./firebaseConfig');
 
+console.log({ env: process.env.PROJECT_ID });
 const app = express();
 app.use(cors());
 app.use(express.json());
